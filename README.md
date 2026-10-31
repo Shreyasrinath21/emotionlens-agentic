@@ -39,14 +39,14 @@ USC's [IEMOCAP release page](https://sail.usc.edu/iemocap/iemocap_release.htm) r
 
 ## Requirements and setup
 
-Python 3.13 is the tested runtime. Exact direct dependency versions are pinned in `backend/requirements.txt`, including Transformers for the optional pretrained classifier. Install the backend dependencies in a virtual environment:
+Python 3.13 is the tested local runtime. `backend/requirements.txt` contains the compact ONNX inference dependencies used by Vercel. For the full local app, model training, tests, and optional Transformers classifier, install the pinned development dependencies instead:
 
 ```powershell
 cd backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-training.txt
 ```
 
 The app is served by FastAPI; no external frontend build or cloud service is required:

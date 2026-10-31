@@ -40,3 +40,4 @@ datasets/
 reports/
 .DS_Store
 .vercel
+/.npm-cache/
